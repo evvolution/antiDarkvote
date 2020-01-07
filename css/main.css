@@ -27,18 +27,23 @@ body{
 .voteContent{
 	line-height: 1.2rem ! important;
 	width:100%;
-	position: fixed;
 	left: 50%;
-	transform: translate(-50%,0%);
+	transform: translate(0%,0%);
 }
 
 .tabs-container {
-	height:100%;
+	height: 100%;
+    overflow: auto;
+    background: #af2c24;
+    top: -2rem;
+    position: relative;
+    z-index: -1;
 }
+
 /*tabs*/
 .fspPIC-tab{
 	width: 100%;
-	height: 4rem;
+	height: 3.8rem;
 	display: block;
 }
 
@@ -60,14 +65,132 @@ body{
 	background-color:#e54823;
 }
 
-
 /*list*/
 .list-group{
 	display: block;
 }
 
-.list-group-item{
-	width: 100%;
+.list-group-item,.list-group-item:first-child,.list-group-item:last-child{
+    width: 100%;
 	border: 0px;
-	margin-bottom: 2px;
+	border-radius: 1.2rem;
+    margin-bottom: 1rem;
+    height: 10rem;
+    background: #e54823;
+}
+
+.itempic{
+	width: 130px;
+    height: 90px;
+    position: relative;
+}
+
+.itempic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+
+.fakeplay{
+	width: 50px ! important;
+    height: 50px ! important;
+    left: 40px ! important;
+    top: 20px ! important;
+}
+
+.iteminfo{
+    display: inline-grid;
+    position: absolute;
+    left: 150px;
+    top: 8px;
+    line-height: 1.4rem;
+}
+
+.iteminfo div{
+	color: #f7ca9f;
+	margin-bottom: 0.7rem;
+	text-align: left;
+}
+
+.itemvotecount{
+	position: absolute;
+    right: 10px;
+	top: 10px;
+	color: #f7ca9f;
+	font-size: 2rem;
+}
+
+.itemvotecount img{
+	width: 2rem;
+    top: -4px;
+    position: relative
+}
+
+/*modal*/
+.modalmain{
+	top: 3rem;
+	background: transparent;
+	text-align: center;
+}
+.modaltitlepic{
+	z-index: 3;
+}
+
+.modaltitlepic img{
+	width: 80%;
+}
+
+.modalcontent{
+	background-color: #fff;
+	border: 1px solid #dc1e1a;
+	border-radius: 2.5rem;
+	z-index: 2;
+	position: relative;
+	top: -4rem;
+	height: 48rem;
+}
+
+.modaldetailintro{
+    position: relative;
+    top: 5rem;
+	left: 2rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #494949;
+	text-align: left;
+}
+
+.modaldetail{
+	top: 30rem;
+    width: 90%;
+    height: 110px;
+    overflow: auto;
+    line-height: 1.5rem;
+	position: absolute;
+	left: 50%;
+    text-align: justify;
+    transform: translate(-50%,0%);
+}
+
+.fsvideo{
+    width: 320px;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,35%);
+}
+
+.vote{
+    z-index: 10;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    border-radius: 4rem;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-50%,0%);
+    color: #f7ca9f;
+    background: #dc1e1a;
 }
