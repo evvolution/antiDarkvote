@@ -7,10 +7,10 @@ $(document).ready(function(){
 
 window.onload = function() {
     initSlide();
-    document.body.addEventListener('touchmove' , function(e){
-    　　var e=e||window.event;
-    　　e.preventDefault();
-    },{ passive: false })
+    // document.body.addEventListener('touchmove' , function(e){
+    // 　　var e=e||window.event;
+    // 　　e.preventDefault();
+    // },{ passive: false })
 }
 
 var link = "http://server.foshanplus.com/";
@@ -48,7 +48,7 @@ function getlistvideo(){
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
                 var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalforvideo' + i + '">';
-                var line2 = '<div class="itempic"><img id="videopost' + i + '" src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("videopost' + i + '") /><img src="img/play.png" class="fakeplay"/></div>';
+                var line2 = '<div class="itempic"><img id="videopost' + i + '" src="' + data.projects[0][i].pic_url + '" /><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
@@ -90,7 +90,7 @@ function getlistmovie(){
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
                 var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalformovie' + i + '">';
-                var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("moviepost' + i + '")/><img src="img/play.png" class="fakeplay"/></div>';
+                var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" /><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
@@ -131,7 +131,7 @@ function getlistcartoon(){
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
                 var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalforcartoon' + i + '">';
-                var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("cartoonpost' + i + '") /><img src="img/play.png" class="fakeplay"/></div>';
+                var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" /><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
@@ -175,11 +175,6 @@ function voteconfirm(type,vote_list){
             alert("当前投票人数过多，请稍后重试");
         }
     })
-}
-
-function postpicerror(item){
-    // $('#' + item).attr('src','/img/logo-fs.png');
-    // $('#' + item).attr('οnerrοr',null); 
 }
 
 function getParam(paramName) {

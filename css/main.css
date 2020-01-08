@@ -19,6 +19,7 @@ body{
 	position: relative;
 	background-color: #feefea;
 	overflow: auto;
+	-webkit-overflow-scrolling: touch
 }
 
 .votebannnar{
@@ -38,7 +39,8 @@ body{
     background: #af2c24;
     top: 0rem;
     position: relative;
-    z-index: -1;
+	z-index: -1;
+	-webkit-overflow-scrolling: touch
 }
 
 /*tabs*/
