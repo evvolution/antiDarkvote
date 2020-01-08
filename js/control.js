@@ -7,10 +7,6 @@ $(document).ready(function(){
 
 window.onload = function() {
     initSlide();
-    // document.body.addEventListener('touchmove' , function(e){
-    // 　　var e=e||window.event;
-    // 　　e.preventDefault();
-    // },{ passive: false })
 }
 
 var link = "http://server.foshanplus.com/";
