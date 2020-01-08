@@ -20,7 +20,7 @@ body{
 }
 
 .main{
-	min-height: 100px;
+	height: 1236px;
 	overflow-y: auto;
 	/* -webkit-overflow-scrolling: touch; */
 }
