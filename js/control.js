@@ -40,12 +40,12 @@ function getlistvideo(){
         url: link + "/exam/get_vote/?exam_id=15",
         dataType:"json",
         success:function(data){
-            // console.log(data)
+            // console.log(data) onclick=$("#videox' + i + '")[0].play()
             var line = "";
             var modal = "";
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
-                var line1 = '<li class="list-group-item" onclick=$("#videox' + i + '")[0].play() data-toggle="modal" data-target="#modalforvideo' + i + '">';
+                var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalforvideo' + i + '">';
                 var line2 = '<div class="itempic"><img id="videopost' + i + '" src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("videopost' + i + '") /><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
@@ -82,12 +82,12 @@ function getlistmovie(){
         url: link + "/exam/get_vote/?exam_id=13",
         dataType:"json",
         success:function(data){
-            // console.log(data);
+            // console.log(data);onclick=$("#moviex' + i + '")[0].play()
             var line = "";
             var modal = "";
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
-                var line1 = '<li class="list-group-item" onclick=$("#moviex' + i + '")[0].play() data-toggle="modal" data-target="#modalformovie' + i + '">';
+                var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalformovie' + i + '">';
                 var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("moviepost' + i + '")/><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
@@ -123,12 +123,12 @@ function getlistcartoon(){
         url: link + "/exam/get_vote/?exam_id=14",
         dataType:"json",
         success:function(data){
-            // console.log(data);
+            // console.log(data); onclick=$("#cartoonx' + i + '")[0].play()
             var line = "";
             var modal = "";
             for(var i=0;i<data.projects[0].length;i++){
                 var linetmp = '';
-                var line1 = '<li class="list-group-item" onclick=$("#cartoonx' + i + '")[0].play() data-toggle="modal" data-target="#modalforcartoon' + i + '">';
+                var line1 = '<li class="list-group-item" data-toggle="modal" data-target="#modalforcartoon' + i + '">';
                 var line2 = '<div class="itempic"><img src="' + data.projects[0][i].pic_url + '" onerror=postpicerror("cartoonpost' + i + '") /><img src="img/play.png" class="fakeplay"/></div>';
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
@@ -164,7 +164,7 @@ function voteconfirm(type,vote_list){
         url: link + 'exam/add_vote_count/?exam_id=' + type + '&openid=' + openid + '&vote_list=' + vote_list,
         dataType:"json",
         success:function(data){
-            console.log(data)
+            // console.log(data)
             alert(data.msg);
             window.location.reload();
         },
@@ -176,8 +176,8 @@ function voteconfirm(type,vote_list){
 }
 
 function postpicerror(item){
-    $('#' + item).attr('src','../img/logo-fs.png');
-    $('#' + item).attr('οnerrοr',null); 
+    // $('#' + item).attr('src','/img/logo-fs.png');
+    // $('#' + item).attr('οnerrοr',null); 
 }
 
 function getParam(paramName) {

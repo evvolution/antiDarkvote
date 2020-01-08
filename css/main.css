@@ -150,7 +150,7 @@ body{
 	z-index: 2;
 	position: relative;
 	top: -4rem;
-	height: 41rem;
+	height: 47rem;
 }
 
 .modaldetailintro{
@@ -164,7 +164,7 @@ body{
 }
 
 .modaldetail{
-	top: 25rem;
+	top: 30rem;
     width: 90%;
     height: 110px;
     overflow: auto;
@@ -189,7 +189,7 @@ body{
     bottom: 1rem;
     left: 50%;
     border-radius: 4rem;
-    width: 5rem;
+    width: 7rem;
     height: 5rem;
     transform: translate(-130%,0%);
     color: #f7ca9f;
@@ -206,9 +206,9 @@ body{
     bottom: 1rem;
     left: 50%;
     border-radius: 4rem;
-    width: 5rem;
+    width: 7rem;
     height: 5rem;
-    transform: translate(50%,0%);
+    transform: translate(48%,0%);
     color: #f7ca9f;
     background: #290b25;
 }
