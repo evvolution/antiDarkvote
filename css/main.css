@@ -18,6 +18,7 @@ body{
 	text-align: center;
 	position: relative;
 	background-color: #feefea;
+	touch-action: none; 
 }
 
 .main{
