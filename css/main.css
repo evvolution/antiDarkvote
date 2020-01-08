@@ -19,6 +19,9 @@ body{
 	text-align: center;
 	position: relative;
 	background-color: #feefea;
+}
+
+.main{
 	overflow: auto;
 	-webkit-overflow-scrolling: touch
 }
