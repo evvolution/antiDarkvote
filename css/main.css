@@ -5,7 +5,6 @@
 html{
 	height: 100%;
 	font-size:62.5%;
-	-webkit-text-size-adjust:none;
 }
 
 body{
@@ -17,14 +16,13 @@ body{
 	background-size: 100%;
 	text-align: center;
 	position: relative;
-	background-color: #feefea;
-	touch-action: none; 
+	background-color: #feefea; 
 }
 
 .main{
 	height: 100%;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: auto | touch;
+	-webkit-overflow-scrolling: touch;
 }
 
 .votebannnar{
