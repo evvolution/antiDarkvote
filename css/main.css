@@ -22,8 +22,8 @@ body{
 }
 
 .main{
-	overflow: auto;
-	-webkit-overflow-scrolling: touch
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: auto | touch;
 }
 
 .votebannnar{
