@@ -33,7 +33,7 @@ body{
 
 #mainpages {
 	height: auto;
-    /* overflow: auto; */
+    overflow: auto;
     background: #af2c24;
     top: 0rem;
     position: relative;
@@ -166,7 +166,7 @@ body{
 .modaldetail{
 	top: 30rem;
     width: 90%;
-    height: 110px;
+    height: 100px;
     overflow: auto;
     line-height: 2rem;
 	position: absolute;
@@ -194,6 +194,7 @@ body{
     transform: translate(-130%,0%);
     color: #f7ca9f;
 	background: #dc1e1a;
+	font-size: 1.3rem;
 }
 
 .vote:focus,.cancelvote:focus{
@@ -210,7 +211,8 @@ body{
     height: 5rem;
     transform: translate(48%,0%);
     color: #f7ca9f;
-    background: #290b25;
+	background: #290b25;
+	font-size: 1.3rem;
 }
 
 .actintro{
