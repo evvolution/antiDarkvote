@@ -61,7 +61,7 @@ function getlistvideo(){
                 var modal2 = '<div class="modalmain modal-content"><div class="modaltitlepic"><img src="img/modaltitle.png"></div>';
                 var modal3 = '<div class="modalcontent"><p class="modaldetailintro">标题：<span>' + data.projects[0][i].title + '</span></p><br/>';
                 var modal4 = '<p class="modaldetailintro">报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></p>';
-                var modal5 = '<video id="videox' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
+                var modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="videox' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
                 var modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div>';
                 var modal7 = '<button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button><button class="cancelvote" data-dismiss="modal" onclick=$("#videox' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
@@ -103,7 +103,7 @@ function getlistmovie(){
                 var modal2 = '<div class="modalmain modal-content"><div class="modaltitlepic"><img src="img/modaltitle.png"></div>';
                 var modal3 = '<div class="modalcontent"><p class="modaldetailintro">标题：<span>' + data.projects[0][i].title + '</span></p><br/>';
                 var modal4 = '<p class="modaldetailintro">报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></p>';
-                var modal5 = '<video id="moviex' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
+                var modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="moviex' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
                 var modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div>';
                 var modal7 = '<button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button><button class="cancelvote" data-dismiss="modal" onclick=$("#moviex' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
@@ -144,7 +144,7 @@ function getlistcartoon(){
                 var modal2 = '<div class="modalmain modal-content"><div class="modaltitlepic"><img src="img/modaltitle.png"></div>';
                 var modal3 = '<div class="modalcontent"><p class="modaldetailintro">标题：<span>' + data.projects[0][i].title + '</span></p><br/>';
                 var modal4 = '<p class="modaldetailintro">报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></p>';
-                var modal5 = '<video id="cartoonx' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
+                var modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="cartoonx' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
                 var modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div>';
                 var modal7 = '<button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button><button class="cancelvote" data-dismiss="modal" onclick=$("#cartoonx' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
