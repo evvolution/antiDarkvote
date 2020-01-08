@@ -21,7 +21,7 @@ body{
 }
 
 .votebannnar{
-	margin-top: 19rem;
+	margin-top: 16rem;
 }
 
 .voteContent{
@@ -31,11 +31,11 @@ body{
 	transform: translate(0%,0%);
 }
 
-.tabs-container {
-	height: 100%;
-    overflow: auto;
+#mainpages {
+	height: auto;
+    /* overflow: auto; */
     background: #af2c24;
-    top: -2rem;
+    top: 0rem;
     position: relative;
     z-index: -1;
 }
@@ -48,7 +48,7 @@ body{
 }
 
 .tabs {
-	border-radius: 3.2rem;
+	/* border-radius: 3.2rem; */
 	background-size:auto 100%;
 	width:100%;
 	overflow:hidden;
@@ -71,12 +71,13 @@ body{
 }
 
 .list-group-item,.list-group-item:first-child,.list-group-item:last-child{
-    width: 100%;
+    width: 94%;
 	border: 0px;
 	border-radius: 1.2rem;
     margin-bottom: 1rem;
     height: 10rem;
-    background: #e54823;
+	background: #e54823;
+	transform: translate(3%,0%)
 }
 
 .itempic{
@@ -130,7 +131,7 @@ body{
 
 /*modal*/
 .modalmain{
-	top: 3rem;
+	top: 2rem;
 	background: transparent;
 	text-align: center;
 }
@@ -149,25 +150,25 @@ body{
 	z-index: 2;
 	position: relative;
 	top: -4rem;
-	height: 48rem;
+	height: 41rem;
 }
 
 .modaldetailintro{
     position: relative;
     top: 5rem;
 	left: 2rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	color: #494949;
 	text-align: left;
 }
 
 .modaldetail{
-	top: 30rem;
+	top: 25rem;
     width: 90%;
     height: 110px;
     overflow: auto;
-    line-height: 1.5rem;
+    line-height: 2rem;
 	position: absolute;
 	left: 50%;
     text-align: justify;
@@ -190,7 +191,43 @@ body{
     border-radius: 4rem;
     width: 5rem;
     height: 5rem;
-    transform: translate(-50%,0%);
+    transform: translate(-130%,0%);
     color: #f7ca9f;
-    background: #dc1e1a;
+	background: #dc1e1a;
+}
+
+.vote:focus,.cancelvote:focus{
+	outline: 0;
+}
+
+.cancelvote{
+	z-index: 10;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    border-radius: 4rem;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(50%,0%);
+    color: #f7ca9f;
+    background: #290b25;
+}
+
+.actintro{
+	background: #e54823;
+	border-radius: 1.2rem;
+	width: 94%;
+	transform: translate(3%,0%);
+	color: #f7ca9f;
+	line-height: 2rem;
+	padding: 1rem;
+	text-align: left;
+}
+
+.actintrodetail{
+	text-align: justify;
+}
+
+.actintrotitle{
+	font-size: 2rem;
 }

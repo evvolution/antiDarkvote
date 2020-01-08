@@ -8,92 +8,62 @@
     <meta name="renderer" content="webkit">
     <meta name="referrer" content="never">
     <link rel="stylesheet" type="text/css" href="bootstrap4.3.1/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="swiper4.0.2/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
     <div class="votebannnar"><img src="img/title.png" id="pagebannar" class="fspPIC" style="width:100%;"></div><br/>
     <div class="voteContent">
         <div class="tabs">
-            <a href="#" class="active" style="width:31%;"><div class="tab"><img class="fspPIC-tab" src="img/tab1.png"/></div></a>
-            <a href="#" style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab2.png"/></div></a>
-            <a href="#" style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab3.png"/></div></a>
-            <a href="#" style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab4.png"/></div></a>
+            <a class="active" style="width:31%;"><div class="tab"><img class="fspPIC-tab" src="img/tab1.png"/></div></a>
+            <a style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab2.png"/></div></a>
+            <a style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab3.png"/></div></a>
+            <a style="width:23%;"><div class="tab"><img class="fspPIC-tab" src="img/tab4.png"/></div></a>
         </div>
-        <div class="tabs-container" class="swiper-container">
+        <div class="swiper-container" id="mainpages">
             <div class="swiper-wrapper">              
-                <!-- tab页1 -->
-                <div class="swiper-slide">
-                    <br/>
+                <div class="swiper-slide" style="height:74rem;"><br/>
+                    <div class="actintro"><br/>
+                        <p class="actintrotitle"><strong>投票时间</strong></p>
+                        <p>2020年1月7日-1月14日</p>
+                        <p class="actintrotitle"><strong>投票规则</strong></p>
+                        <p>1.	每天每个微信号每类参赛作品只能投票一次</p>
+                        <p>2.	每类参赛作品可多选3个投票3个</p>
+                        <p class="actintrodetail">3.	得奖作品以评委投票和网络投票的综合得分方式产生，网络投票占20%、专家评审分数占80%。（为鼓励优秀原创作品，各项等级奖项不可以重复获奖）</p>
+                        <p class="actintrotitle"><strong>奖金设置</strong></p>
+                        <p>一等奖：10000元（1名）</p>
+                        <p>二等奖：5000元（3名）</p>
+                        <p>三等奖：3000元（6名）</p>
+                        <p>优秀奖：500元（20名）</p>
+                        <p class="actintrotitle"><strong>活动简介</strong></p>
+                        <p class="actintrodetail">为宣传扫黑除恶专项斗争，共建平安佛山，引导和鼓励有关优秀作品的制作和传播，不断提升扫黑除恶斗争与平安建设工作的知晓率和影响力，佛山市委政法委、佛山市扫黑除恶办面向全社会开展“扫黑除恶治乱、共建平安佛山”创意微视频、微电影、微动漫征集大赛活动，并将在佛山日报、佛山+等重要媒体平台上展播，鼓励更多的市民了解并参与佛山扫黑除恶与平安创建工作，提升群众获得感、幸福感和安全感。</p>
+                        <p class="actintrotitle"><strong>技术支持</strong></p>
+                        <div><img src="img/fsp.png" style="width: 100%;"></div>
+                        <br/>
+                    </div>
                 </div>
-                <!-- End of tab页1 -->
-                
-                <!-- tab页2 -->
-                <div class="swiper-slide">
-                    <br/><br/><br/>
+
+                <div class="swiper-slide" style="height:510rem;"><br/>
                     <ul class="list-group" id="microvideo"></ul>
                 </div>
-                <!-- End of tab页2 -->
-
-                <!-- tab页3 -->
-                <div class="swiper-slide">
-                    <br/><br/><br/>
-                    <ul class="list-group" id="micromovie">
-                        <!-- <li class="list-group-item" data-toggle="modal" data-target="#newstitle1">
-                            <div class="itempic"><img src="img/tab1.png" /><img src="img/play.png" class="fakeplay"/></div>
-                            <div class="iteminfo">
-                                <div>编号：<span>123</span></div>
-                                <div>作品名称：<span>防范网络诈骗</span></div>
-                                <div>报送单位：<span>个人（张星星）</span></div>
-                            </div>
-                            <div class="itemvotecount">12345&nbsp;<img src="img/thumb.png" /></div>
-                        </li> -->
-                    </ul>
+                <div class="swiper-slide" style="height:170rem;"><br/>
+                    <ul class="list-group" id="micromovie"></ul>
                 </div>
-                <!-- End of tab页3 -->
 
-                <!-- tab页4 -->
-                <div class="swiper-slide">
-                    <br/><br/><br/>
-                    <ul class="list-group" id="microcartoon">
-                    </ul>
+                <div class="swiper-slide" style="height:730rem;"><br/>
+                    <ul class="list-group" id="microcartoon"></ul>
                 </div>
-                <!-- End of tab页4 -->
-
             </div>
         </div>
     </div>
-
-
     <div id="modalsmicrovideo"></div>
     <div id="modalsmicromovie"></div>
     <div id="modalsmicrocartoon"></div>
-        <!-- <div class="modal fade" id="newstitle1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modalmain modal-content">
-                    <div class="modaltitlepic"><img src="img/modaltitle.png"></div>
-                    <div class="modalcontent">
-                        <p class="modaldetailintro">标题：<span>防范网络诈骗</span></p><br/>
-                        <p class="modaldetailintro">报送单位：<span>个人（张星星）</span></p>
-                        <video class="fsvideo" controls="controls" poster="#" preload="none" src="http://img.foshanplus.com/2019hei/%E7%89%B9%E5%88%AB%E8%A1%8C%E5%8A%A8%E4%B9%8B%E6%89%AB%E6%AF%92.mp4"></video>
-                        <div class="modaldetail">用象征毒品的白色粉末组成的画面，来表现一个吸毒者的心路历程，事业，友情，爱情，家庭直至生命，都会因为毒品而不断失去，就像那白色的粉末，瞬间飘散！只有远离这些象征毒品的白色粉末，才能享受自己的多彩人生。用象征毒品的白色粉末组成的画面，来表现一个吸毒者的心路历程，事业，友情，爱情，家庭直至生命，都会因为毒品而不断失去，就像那白色的粉末，瞬间飘散！只有远离这些象征毒品的白色粉末，才能享受自己的多彩人生。用象征毒品的白色粉末组成的画面，来表现一个吸毒者的心路历程，事业，友情，爱情，家庭直至生命，都会因为毒品而不断失去，就像那白色的粉末，瞬间飘散！只有远离这些象征毒品的白色粉末，才能享受自己的多彩人生。用象征毒品的白色粉末组成的画面，来表现一个吸毒者的心路历程，事业，友情，爱情，家庭直至生命，都会因为毒品而不断失去，就像那白色的粉末，瞬间飘散！只有远离这些象征毒品的白色粉末，才能享受自己的多彩人生。</div>
-                        <button class="vote" onclick>投票</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-    
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap4.3.1/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrap4.3.1/popper.min.js"></script>
-    <script type="text/javascript" src="swiper4.0.2/swiper.min.js"></script>
+    <script type="text/javascript" src="swiper/swiper.min.js"></script>
     <script type="text/javascript" src="js/control.js"></script>
-    <!-- <video style="width: 300px;height: 200px;" controls="controls" preload src="http://img.foshanplus.com/2019hei/%E6%94%B6%E7%A7%9F.mp4"></video> -->
-    <!-- <video style="width: 300px;height: 200px;" controls="controls" preload="none" src="http://img.foshanplus.com/2019hei/%E7%89%B9%E5%88%AB%E8%A1%8C%E5%8A%A8%E4%B9%8B%E6%89%AB%E6%AF%92.mp4"></video>
-    <br/> -->
-    <!-- <video style="width: 300px;height: 200px;" controls="controls" preload="none" src="http://img.foshanplus.com/%E4%BD%9B%E5%B1%B1%E5%B8%82%E5%8D%97%E6%B5%B7%E5%8C%BA%E4%B8%B9%E7%81%B6%E9%95%87%E9%87%91%E6%B2%99%E5%B0%8F%E5%AD%A6%E2%80%9C%E6%A0%A1%E5%9B%AD%E6%AC%BA%E5%87%8C%E2%80%9D%E4%B8%BB%E9%A2%98%E9%87%87%E8%AE%BF%EF%BC%88%E6%9C%89%E5%AD%97%E5%B9%95%EF%BC%89.mov"></video> -->
 </body>
 </html>
