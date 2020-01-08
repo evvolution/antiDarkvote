@@ -18,6 +18,7 @@ body{
 	text-align: center;
 	position: relative;
 	background-color: #feefea;
+	overflow: auto;
 }
 
 .votebannnar{
@@ -33,7 +34,7 @@ body{
 
 #mainpages {
 	height: auto;
-    overflow: auto;
+    /* overflow: auto; */
     background: #af2c24;
     top: 0rem;
     position: relative;
