@@ -200,7 +200,7 @@ body{
     transform: translate(-130%,0%);
     color: #f7ca9f;
 	background: #dc1e1a;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 .vote:focus,.cancelvote:focus{
@@ -218,7 +218,7 @@ body{
     transform: translate(48%,0%);
     color: #f7ca9f;
 	background: #290b25;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 .actintro{
