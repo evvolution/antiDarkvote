@@ -181,12 +181,34 @@ body{
     transform: translate(-50%,0%);
 }
 
+.multvideocontent{
+	height: 200px;
+    overflow: auto;
+    top: 6rem;
+    position: relative;
+}
+
+.fsmultvideo{
+	width: 320px;
+    height: 160px;
+    /* position: relative; */
+    /* left: 50%; */
+    /* top: 58px; */
+    transform: translate(5%,0%);
+    display: block;
+}
+
+.mutiltitle{
+	line-height: 1.6rem;
+    margin-bottom: 0;
+}
+
 .fsvideo{
     width: 320px;
     height: 180px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,35%);
+	transform: translate(-50%,35%);
 }
 
 .vote{
