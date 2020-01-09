@@ -37,7 +37,7 @@ body{
 }
 
 #mainpages {
-	height: auto;
+	/* height: auto; */
     /* overflow: auto; */
     background: #af2c24;
     top: 0rem;
