@@ -70,11 +70,11 @@ function getlistvideo(){
                         modal5 += modal5x;
                     }
                     modal5 = '<div class="multvideocontent">' + modal5 + '</div>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm("videogood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=pausemutilvideo("videomx",' + mutilcount + ')>关闭</button></div></div></div></div>';
                 }else{
                     modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="videox' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm("videogood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=$("#videox' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 }
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
