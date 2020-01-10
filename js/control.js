@@ -48,7 +48,7 @@ function getlistvideo(){
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
-                var line6 = '<div class="itemvotecount">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
+                var line6 = '<div class="itemvotecount" id="videogood' + i +'">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
                 linetmp = line1 + line2 + line3 + line4 + line5 + line6;
                 line += linetmp;
 
@@ -70,11 +70,11 @@ function getlistvideo(){
                         modal5 += modal5x;
                     }
                     modal5 = '<div class="multvideocontent">' + modal5 + '</div>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=pausemutilvideo("videomx",' + mutilcount + ')>关闭</button></div></div></div></div>';
                 }else{
                     modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="videox' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=$("#videox' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 }
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
@@ -86,7 +86,7 @@ function getlistvideo(){
         },
         error: function(){
             console.log('getlistvideofailed');
-            alert("当前投票人数过多，请稍后重试");
+            alert("当前点赞人数过多，请稍后重试");
         }
     })
 }
@@ -107,7 +107,7 @@ function getlistmovie(){
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
-                var line6 = '<div class="itemvotecount">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
+                var line6 = '<div class="itemvotecount" id="moviegood' + i +'">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
                 linetmp = line1 + line2 + line3 + line4 + line5 + line6;
                 line += linetmp;
 
@@ -129,11 +129,11 @@ function getlistmovie(){
                         modal5 += modal5x;
                     }
                     modal5 = '<div class="multvideocontent">' + modal5 + '</div>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=pausemutilvideo("moviemx",' + mutilcount + ')>关闭</button></div></div></div></div>';
                 }else{
                     modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="moviex' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm("moviegood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=$("#moviex' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 }
                 
@@ -145,7 +145,7 @@ function getlistmovie(){
         },
         error: function(){
             console.log('getlistmoviefailed');
-            alert("当前投票人数过多，请稍后重试");
+            alert("当前点赞人数过多，请稍后重试");
         }
     })
 }
@@ -166,7 +166,7 @@ function getlistcartoon(){
                 var line3 = '<div class="iteminfo"><div>编号：<span>' + data.projects[0][i].item_id + '</span></div>';
                 var line4 = '<div>作品名称：<span>' + data.projects[0][i].title + '</span></div>';
                 var line5 = '<div>报送单位：<span>' + data.projects[0][i].content.split("报送单位:")[1].split("作品简介:")[0] + '</span></div></div>';
-                var line6 = '<div class="itemvotecount">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
+                var line6 = '<div class="itemvotecount" id="cartoongood' + i +'">' + data.projects[0][i].vote_count + '&nbsp;<img src="img/thumb.png" /></div></li>';
                 linetmp = line1 + line2 + line3 + line4 + line5 + line6;
                 line += linetmp;
 
@@ -184,15 +184,15 @@ function getlistcartoon(){
                     var mutilcount = mutilvideosjson.length;
                     var modal5x = '';
                     for(var j=0; j<mutilcount; j++){
-                        modal5x = '<p class="mutiltitle">' + mutilvideosjson[j].name + '</p><video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="cartoonmx' + j + '" class="fsmultvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + mutilvideosjson[j].url + '"></video><br/>';
+                        modal5x = '<p class="mutiltitle">' + mutilvideosjson[j].name + '</p><video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="ttrue" x5-playsinline id="cartoonmx' + j + '" class="fsmultvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + mutilvideosjson[j].url + '"></video><br/>';
                         modal5 += modal5x;
                     }
                     modal5 = '<div class="multvideocontent">' + modal5 + '</div>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1].split("++++")[0] + '</div><button class="vote" onclick=voteconfirm("cartoongood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=pausemutilvideo("cartoonmx",' + mutilcount + ')>关闭</button></div></div></div></div>';
                 }else{
                     modal5 = '<video x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline id="cartoonx' + i + '" class="fsvideo" controls="controls" poster="' + data.projects[0][i].pic_url + '" preload="none" src="' + data.projects[0][i].url + '"></video>';
-                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm(' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>投票</button>';
+                    modal6 = '<div class="modaldetail">' + data.projects[0][i].content.split("作品简介:")[1] + '</div><button class="vote" data-dismiss="modal" onclick=voteconfirm("cartoongood' + i + '",' + data.projects[0][i].exam + ',' + data.projects[0][i].id + ')>点赞</button>';
                     modal7 = '<button class="cancelvote" data-dismiss="modal" onclick=$("#cartoonx' + i + '")[0].pause()>关闭</button></div></div></div></div>';
                 }
                 modaltmp = modal1 + modal2 + modal3 + modal4 + modal5 + modal6 + modal7;
@@ -203,24 +203,30 @@ function getlistcartoon(){
         },
         error: function(){
             console.log('getlistcartoonfailed');
-            alert("当前投票人数过多，请稍后重试");
+            alert("当前点赞人数过多，请稍后重试");
         }
     })
 }
 
-function voteconfirm(type,vote_list){
+function voteconfirm(item,type,vote_list){
     $.ajax({
         type:"get",
         url: link + 'exam/add_vote_count/?exam_id=' + type + '&openid=' + openid + '&vote_list=' + vote_list,
         dataType:"json",
         success:function(data){
-            // console.log(data)
-            alert(data.msg);
+            console.log(data)
+            if(data.is_error == true){
+                alert(data.msg);
+            }else{
+                var newcount = String(Number($('#' + item).html().split("&nbsp;")[0]) + Number(1)) + '&nbsp;<img src="img/thumb.png" />';
+                $('#' + item).html(newcount);
+                alert(data.msg);
+            }
             // window.location.reload();
         },
         error: function(){
             console.log('voteconfirm*****xxx');
-            alert("当前投票人数过多，请稍后重试");
+            alert("当前点赞人数过多，请稍后重试");
         }
     })
 }
