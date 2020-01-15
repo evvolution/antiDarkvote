@@ -261,3 +261,40 @@ body{
 .actintrotitle{
 	font-size: 2rem;
 }
+
+.rankitem{
+	border-radius: 1rem;
+	border: 1px solid #f7ca9f;
+	margin: 1rem 0;
+	width: 90%;
+	height: 7rem;
+	padding: 5px;
+	position: relative;
+    left: 50%;
+	transform: translate(-50%);
+}
+
+.rankorder{
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	color: #f7ca9f;
+	font-size: 2rem;
+}
+
+.rankprize{
+	display: inline-block;
+	position: absolute;
+	right: 1rem;
+	width: 3rem;
+	height: auto;
+}
+
+.rankinfo{
+	position: relative;
+	left: 3rem;
+	margin: .6rem 0;
+	color: #f7ca9f;
+	font-size: 1.4rem;
+	text-align: left;
+}

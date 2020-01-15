@@ -1,8 +1,11 @@
 $(document).ready(function(){
-    getlistvideo();
-    getlistmovie();
-    getlistcartoon();
+    // getlistvideo();
+    // getlistmovie();
+    // getlistcartoon();
 
+    getrank("video","15");
+    getrank("movie","13");
+    getrank("cartoon","14");
 })
 
 window.onload = function() {
@@ -32,6 +35,44 @@ function initSlide(){
     })
 }
 
+function getrank(item,id){
+    $.ajax({
+        type:"get",
+        url: link + 'exam/get_vote_rank/?exam_id=' + id + '&top=10',
+        dataType:"json",
+        success:function(data){
+            // console.log(data)
+            // console.log(data[0].votes.length)
+            var line = "";
+            for(var i=0;i<data[0].votes.length;i++){
+                var linetmp = '';
+                var line1 = '';
+                if(i == 0){
+                    line1 = '<div class="rankitem"><span class="rankorder"><strong>1</strong></span><div class="rankprize"><img src="img/1.png" style="width: 100%;"/></div>'
+                }else if(i == 1){
+                    line1 = '<div class="rankitem"><span class="rankorder"><strong>2</strong></span><div class="rankprize"><img src="img/2.png" style="width: 100%;"/></div>'
+                }else if(i == 2){
+                    line1 = '<div class="rankitem"><span class="rankorder"><strong>3</strong></span><div class="rankprize"><img src="img/3.png" style="width: 100%;"/></div>'
+                }else{
+                    line1 = '<div class="rankitem"><span class="rankorder"><strong>' + (i+1) + '</strong></span>'
+                }
+                var line2 = '<div class="rankinfo">作品编号：' + data[0].votes[i].item_id + '&nbsp;&nbsp;点赞数：' + data[0].votes[i].vote_count + '</div>';
+                var line3 = '<div class="rankinfo">作品名称：' + data[0].votes[i].title + '</div>';
+                var line4 = '<div class="rankinfo">报送单位：' + data[0].votes[i].content.split("报送单位:")[1].split("作品简介")[0] + '</div></div>';
+                linetmp = line1 + line2 + line3 + line4
+                line += linetmp;
+            }
+            $('#micro' + item + 'rank').html(line);
+        },
+        error: function(data){
+            console.log(data);
+            console.log('get' + item + 'failed');
+            alert("当前人数过多，请稍后重试");
+        }
+    })
+}
+
+/*-----------------投票部分----------------*/
 function getlistvideo(){
     $.ajax({
         type:"get",
