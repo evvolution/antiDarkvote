@@ -3,6 +3,7 @@ $(document).ready(function(){
     // getlistmovie();
     // getlistcartoon();
 
+    alert("点赞已经结束");
     getrank("video","15");
     getrank("movie","13");
     getrank("cartoon","14");
